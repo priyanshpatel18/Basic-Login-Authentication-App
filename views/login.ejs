@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Login Page</title>
+		<link
+			rel="stylesheet"
+			href="styles.css"
+		/>
+	</head>
+	<body style="font-family: Montserrat">
+		<main>
+			<form
+				method="post"
+				action="/login"
+			>
+				<h1>LOGIN PAGE</h1>
+				<input
+					type="text"
+					name="email"
+					placeholder="Email"
+					required
+					value="<%= locals.email %>"
+				/>
+				<input
+					type="password"
+					name="password"
+					placeholder="Password"
+					required
+				/>
+
+				<div class="error"><%= locals.message %></div>
+				<button type="submit">LOGIN</button>
+			</form>
+		</main>
+	</body>
+</html>
